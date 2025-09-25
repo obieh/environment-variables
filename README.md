@@ -75,7 +75,7 @@ const dbHost = process.env.DB_HOST;
 
 ![](./img/Pasted%20image.png)
 
-2. paste the script below
+2. paste the script below.
 
 ```bash
 #!/bin/bash
@@ -94,5 +94,48 @@ else
 echo "No environment specified or recognized."
 exit 2
 fi
+```
+![](./img/Pasted%20image%20(2).png)
 
-``
+3. Get relevant permission to execute your script `sudo chmod +x aws_cloud_manager.sh
+`
+![](./img/Pasted%20image%20(3).png)
+
+4. Execute the script, you will get 'No environment' message.
+
+![](./img/Pasted%20image%20(4).png)
+
+5. Type `export ENVIRONMENT=production` and execute the script again.
+
+![](./img/Pasted%20image%20(5).png)
+
+#### Now the script is runing for production environment because you exported the environment 'production'
+
+#### You can also set the ENV directly in the script.
+
+![](./img/Pasted%20image%20(6).png)
+
+6. Run the script again. It should now run for testing ENV.
+
+![](./img/Pasted%20image%20(7).png)
+
+#### Positional parameters: This simply means passing to scripts at run time, and then replaces the argument with the parameter inside the script.
+
+![](./img/Pasted%20image%20(9).png)
+
+#### You can add multiple positional parameters to your script.(testing => positional parameter 1, 5 => positional parameter 2)
+
+![](./img/Pasted%20image%20(11).png)
+
+7. Update your script to look as the one below
+
+![](./img/Pasted%20image%20(14).png)
+
+8. Run your script again. You will see that the output for each environment.
+
+![](./img/Pasted%20image%20(15).png)
+
+```bash
+
+```
+
